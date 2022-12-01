@@ -17,6 +17,9 @@ let imagesInitial = [
 
 const aksSlider_wrapper = document.querySelector('.aks-slider');
 
+//Функция слайдер
+function aksSlider(aksSlider_wrapper, imagesInitial) {
+
     const aksSlider_wrapper_Title = aksSlider_wrapper.querySelector('.aks-slider-title-wrapper'); //Контейнер для заголовков
     const aksSlider_wrapper_Img = aksSlider_wrapper.querySelector('.aks-slider-img-wrapper'); //Контейнер для картинок
     const aksSlider_wrapper_Control = aksSlider_wrapper.querySelector('.aks-slider-control-wrapper'); //Контейнер для точек управления
@@ -166,5 +169,9 @@ const aksSlider_wrapper = document.querySelector('.aks-slider');
     rightControlArrow.addEventListener('click', () => {
         arrowClick('right');
     });
+
+};
+
+document.addEventListener('DOMContentLoaded', aksSlider(aksSlider_wrapper, imagesInitial));
 
 // aksSlider End
